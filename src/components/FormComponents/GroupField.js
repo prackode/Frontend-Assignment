@@ -29,7 +29,6 @@ const GroupField = ({ schema }) => {
 
   const handleTabChange = (tabValue) => {
     setSelectedTab(tabValue);
-
     updateFormData(schema.jsonKey, tabValue);
   };
 
@@ -89,7 +88,7 @@ const GroupField = ({ schema }) => {
   return (
     <Box>
       <FormLabel>{schema.label}</FormLabel>
-      {schema.subParameters.map((field) => renderRadioButtons(field))}
+      {schema.subParameters.map((data) => renderRadioButtons(data))}
       {renderSubParameters(schema.subParameters)}
     </Box>
   );
